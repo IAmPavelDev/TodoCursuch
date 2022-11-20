@@ -19,8 +19,9 @@ class UserController {
 		res.json({ users, currentUserId })
 	}
 
-	checkIsAuth(req, res) {
-		res.json({isAuth: true, isAdmin: req.user.isAdmin});
+	async checkIsAuth(req, res) {
+		const { isAdmin } = await UserRepository.findByName(req.user.username);
+		res.json({isAuth: true, isAdmin});
 	}
 
 	async changeAdminRoles(req, res) {

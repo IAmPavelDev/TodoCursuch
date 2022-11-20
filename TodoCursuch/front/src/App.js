@@ -27,8 +27,8 @@ function Main({ isUserAdmin, setIsUserAdmin, isAuth, setIsAuth }) {
   useEffect(() => {
     checkIsAuth()//проверяем на сервере авторизован ли пользователь
       .then(response => {
-        Authorize(response.isAuth)// если true пускаем сразу к приложению
         setIsUserAdmin(response.isAdmin)
+        Authorize(response.isAuth)// если true пускаем сразу к приложению
       })
   })
   return (

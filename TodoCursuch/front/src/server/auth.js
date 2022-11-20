@@ -63,8 +63,8 @@ export const login = (username,
         setIsRegister(true);
       }
       sessionStorage.setItem("token", data.token);
-      if (data.token) { confirm() };
       setIsUserAdmin(data.isUserAdmin);
+      if (data.token) { confirm() };
     })
     .catch(e => console.error(e))
 };
