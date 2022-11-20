@@ -1,3 +1,4 @@
+import env from "react-dotenv";
 
 export const registration = (username, password, confirm) => {//получаем данные формы и вызываем confirm если сервер вернул токен
   const request = JSON.stringify({
@@ -18,7 +19,7 @@ export const registration = (username, password, confirm) => {//получаем
     redirect: "follow",
   };
   fetch(
-    "http://localhost:5000/api/user/registration",
+    env.SERVER_URL + "/api/user/registration",
     requestOptions
   )
     .then(res => res.json())
@@ -52,7 +53,7 @@ export const login = (username,
     redirect: "follow",
   };
   fetch(
-    "http://localhost:5000/api/user/login",
+    env.SERVER_URL + "/api/user/login",
     requestOptions
   )
     .then((result) => result.json())
@@ -70,7 +71,9 @@ export const login = (username,
 
 export const checkIsAuth = async () => {//проверяем на сервере авторизован пользователь или нет
 
+  const token = sessionStorage.getItem("token");
   const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer ${token}`);
   myHeaders.append("Content-Type", "application/json");
   myHeaders.append("Access-Control-Allow-Origin", "*");
   myHeaders.append("Access-Control-Allow-Methods", "GET, PUT, PATCH, DELETE, POST");
@@ -83,7 +86,7 @@ export const checkIsAuth = async () => {//проверяем на сервере
   };
 
   return await fetch(
-    "http://localhost:5000/api/user/checkIsAuth",
+    env.SERVER_URL + "/api/user/checkIsAuth",
     requestOptions
   )
     .then(res => res.json())

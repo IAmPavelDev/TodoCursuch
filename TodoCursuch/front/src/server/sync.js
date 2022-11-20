@@ -1,3 +1,4 @@
+import env from "react-dotenv";
 
 export default class itemsSync {
 
@@ -13,7 +14,7 @@ export default class itemsSync {
             headers: myHeaders,
             redirect: "follow",
         };
-        return await fetch("http://localhost:5000/api/item", requestOptions)
+        return await fetch(env.SERVER_URL + "/api/item", requestOptions)
             .then((response) => response.json())
             .catch((error) => console.log("error", error));
     }
@@ -41,7 +42,7 @@ export default class itemsSync {
         };
 
         return await fetch(
-            "http://localhost:5000/api/item/create",
+            env.SERVER_URL + "/api/item/create",
             requestOptions
         )
             .then((result) => result.json())
@@ -70,7 +71,7 @@ export default class itemsSync {
         };
 
         return await fetch(
-            "http://localhost:5000/api/item/edit",
+            env.SERVER_URL + "/api/item/edit",
             requestOptions
         )
             .then((result) => result.json())
@@ -102,7 +103,7 @@ export default class itemsSync {
         };
 
         return await fetch(
-            "http://localhost:5000/api/item/delete",
+            env.SERVER_URL + "/api/item/delete",
             requestOptions
         )
             .then((result) => result.json())

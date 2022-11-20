@@ -1,3 +1,5 @@
+import env from "react-dotenv";
+
 export default async function changeAdminRoles(userId, isAdminSet) {//меняем роль пользователя по userId
     const token = sessionStorage.getItem("token");
     const myHeaders = new Headers();
@@ -16,7 +18,7 @@ export default async function changeAdminRoles(userId, isAdminSet) {//меняе
         body: request,
         redirect: "follow",
       };
-    return await fetch("http://localhost:5000/api/user/changeAdminRoles", requestOptions)
+    return await fetch(env.SERVER_URL + "/api/user/changeAdminRoles", requestOptions)
         .then((response) => response.json())
         .catch((error) => console.log("error", error));
 }
