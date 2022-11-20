@@ -1,0 +1,119 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+
+    color: black;
+    .wrapper__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 8px;
+        margin: auto;
+        padding: 20px;
+
+        .wrapper__container__head {
+            display: flex;
+            flex-direction: column;
+            color: black;
+            .status {
+                color: red;
+                font-size: 0.7rem;
+                font-weight: 600;
+            }
+            .wrapper__container__head__main {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: black;
+            }
+
+            .wrapper__container__head__btn__theme {
+                font-size: 30px;
+                transition: all 0.3s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .wrapper__container__input__password {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .wrapper__container__input__password__toggle {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: absolute;
+                color: rgb(0, 0, 0);
+                margin-right: 8px;
+                outline: none;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    transform: scale(1.2);
+                    outline: none;
+                }
+            }
+        }
+
+        h2 {
+            cursor: default;
+        }
+
+        input {
+            line-height: 36px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255);
+            padding: 5px 10px;
+            margin: 5px 0;
+            outline: none;
+            transition: all 0.2s;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.01);
+                border: 1px solid rgb(138, 239, 97);
+            }
+        }
+
+        .wrapper__container__sbmt__btn {
+            color: rgb(0, 0, 0);
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 8px;
+            margin: 20px 30px 5px 30px;
+            padding: 10px 0;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(138, 239, 97);
+                color: black;
+                transform: scale(1.01);
+            }
+        }
+
+        .wrapper__container__have_acc_btn {
+            color: rgb(0, 0, 0);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                border: 1px solid rgb(138, 239, 97);
+                border-radius: 10px;
+                transform: scale(1.01);
+            }
+        }
+    }
+}

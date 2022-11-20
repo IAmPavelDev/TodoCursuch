@@ -1,0 +1,103 @@
+.create__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    width: 70vw;
+    max-width: 930px;
+    margin: 20px auto;
+    .create__wrapper__inputs {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        div {
+            max-width: 17vw;
+            min-width: 17vw;
+            line-height: 1.25em;
+            min-height: 2.5em;
+            height: auto;
+        }
+    }
+    .create__wrapper__buttons {
+        display: flex;
+        flex-direction: row;
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        .create__wrapper__buttons__btn {
+            margin-right: 10px;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.1);
+                color: rgb(173, 197, 36);
+            }
+        }
+    }
+    .create__wrapper__name,
+    .create__wrapper__main,
+    button {
+        color: rgb(0, 0, 0);
+        margin: 0 10px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        padding: 5px 10px;
+        transition: all 0.3s;
+        font-weight: 500;
+        outline: none;
+        height: 36px;
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+    // .create__wrapper__name,
+    // .create__wrapper__main {
+    //     &:focus,
+    //     &:hover {
+    //         background-color: rgb(173, 197, 36);
+    //         color: rgb(0, 0, 0);
+    //     }
+    // }
+    button {
+        padding: 0 20px;
+        transition: all 0.3s;
+        background-color: rgb(0, 0, 0);
+        &:hover {
+            font-weight: 600;
+            background-color: rgb(173, 197, 36);
+            color: black;
+        }
+    }
+    @media (max-width: 1600px) {
+        .create__wrapper__inputs {
+            div {
+                min-width: 19vw;
+            }
+        }
+    }
+    @media (max-width: 800px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .create__wrapper__inputs {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            div {
+                min-width: calc(50vw - 60px);
+                margin-top: 5px;
+                padding: 5px 20px;
+            }
+        }
+        .create__wrapper__buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            button {
+                margin-top: 5px;
+                padding: 5px 20px;
+            }
+            .create__wrapper__buttons__btn {
+                margin: 5px 0;
+            }
+        }
+    }
+}

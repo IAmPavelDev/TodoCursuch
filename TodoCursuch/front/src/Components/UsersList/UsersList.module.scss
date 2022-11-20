@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 40px auto;
+    .user {
+        display: flex;
+        gap: 20px;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+        .user__status {
+            color: green;
+        }
+        .user__makeAdmin {
+           
+            cursor: pointer;
+            .makeAdmin__btn {
+                 font-size: 18px;
+            }
+        }
+    }
+}

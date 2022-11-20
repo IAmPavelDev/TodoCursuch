@@ -1,0 +1,58 @@
+.ToDoItem__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    min-height: 109px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 12px;
+    background-color: white;
+    width: 100%;
+
+    color: black;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.003);
+        border: 1px solid rgb(173, 197, 36);
+        .ToDoItem__wrapper__buttons {
+            button {
+                border: 1px solid rgb(173, 197, 36);
+            }
+        }
+    }
+    .ToDoItem__wrapper__data {
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        width: calc(80% - 25px);
+        margin-left: 20px;
+        margin-right: 5px;
+
+        .ToDoItem__wrapper__data__name,
+        .ToDoItem__wrapper__data__main {
+            font-size: 1.25em;
+            font-weight: 600;
+            width: calc(100% - 20px);
+            margin: 10px 0 0 200px;
+            padding: 5px 10px;
+            align-self: flex-end;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            line-height: 1.25em;
+            min-height: 2.5em;
+            margin-top: 5px;
+        }
+    }
+    .ToDoItem__wrapper__buttons {
+        float: right;
+        font-size: 36px;
+        div {
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.03);
+                color: rgb(173, 197, 36);
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin: 20px 50px;
+    max-width: 930px;
+
+    a {
+        color: black;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid transparent;
+        transition: all .3s;
+
+        &:hover {
+            border-bottom-color: green;
+            transform: scale(1.04);
+        }
+    }
+    .activeLink {
+        border-bottom-color: rgb(128, 36, 0);
+    }
+}
