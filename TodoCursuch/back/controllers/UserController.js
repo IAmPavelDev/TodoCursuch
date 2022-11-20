@@ -1,4 +1,4 @@
-const { hash, compareSync } = require("bcrypt");
+const { hash, compareSync } = require("bcryptjs");
 const { sign } = require("jsonwebtoken");
 const UserRepository = require("../Repositories/UserRepository");
 
