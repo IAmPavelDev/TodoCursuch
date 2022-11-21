@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 (async () => {
     try {
         mongoose.connect(
-            "mongodb+srv://pavelforyourmind:rAlSoDA7sjKeI3KZ@cursach.omjrhyi.mongodb.net/?retryWrites=true&w=majority",
+            "mongodb+srv://danil:mongopwd123@cursuch.ejcdxwa.mongodb.net/?retryWrites=true&w=majority",
             { useUnifiedTopology: true, useNewUrlParser: true },
             function (err) {
                 if (err) return console.log(err);
